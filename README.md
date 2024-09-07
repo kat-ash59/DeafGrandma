@@ -11,14 +11,19 @@ You are going to see your sweet old Grandma. Unfortunately, she can't hear very 
 #### User Story #1
 
 The user is prompted to say something to Grandma.
+done!
 
 #### User Story #2
 
 Grandma can only hear the user if the user SHOUTS (responds in capital letters).
 
+had to force userinput from keyboard to use .toUpperCase() when reading from keyboard input
+
 #### User Story #3
 
 When Grandma doesn't hear you, she SHOUTS a phrase such as "HUH? SPEAK UP BILLY!"
+
+added check to see if the input string was all upper case and printed out  "HUH? SPEAK UP BILLY!" if it wasn't
 
 #### User Story #4
 
@@ -76,6 +81,8 @@ data types
 loops (for, do)
 
 IfElse
+
+.toUpperCase()
 
 
 
