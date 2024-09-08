@@ -24,44 +24,33 @@ public class DeafGrandmaApp
 	{
 		Scanner keyboard = new Scanner(System.in);
 		String talkToGrandma = null;
-		String grandmaHeard = null;
+		String grandmaHeard = "Hello";
 		boolean keepTalkingToGrandma = true;
 		Grandma grandmaAnswers = new Grandma();
-		int randomIndex = 0;
 		
-		
-		System.out.println("\n\nPlease say something to Grandma! ");
-		System.out.print("When you want to leave say \"GOODBYE\" ");
-		talkToGrandma = keyboard.nextLine();
+		// System.out.println("\n\nPlease say something to Grandma! ");
+		// System.out.print("When you want to leave say \"GOODBYE\" ");
+		// talkToGrandma = keyboard.nextLine();
 		
 		// System.out.println("before while loop talkToGrandma = " + talkToGrandma);
 		
-		grandmaHeard = grandmaAnswers.grandmaHears(talkToGrandma);
+		// grandmaHeard = grandmaAnswers.grandmaHears(talkToGrandma);
 		
 		
 		while(keepTalkingToGrandma)
 		{
-		
-			if (grandmaHeard.contains("BYE"))
+			
+			if (grandmaHeard.equals("GOODBYE"))
 			{
-				System.out.println(grandmaAnswers.farewell());
 				break;
 			}
-			else if (grandmaHeard.equals(talkToGrandma.toUpperCase()))
-			{
-				System.out.println(grandmaAnswers.affirmative());
-			}
-			else
-			{
-				System.out.println(grandmaAnswers.negative());
-			}
-		
+			
 			System.out.print("\n\nPlease say something to Grandma! ");
 			talkToGrandma = keyboard.nextLine();
 			talkToGrandma = grandmaAnswers.randomizeCase(talkToGrandma);
 			
-			grandmaHeard = grandmaAnswers.grandmaHears(talkToGrandma);
-			
+			grandmaHeard = grandmaAnswers.randomAnswer(talkToGrandma);
+				
 		} // end while loop
 		
 		keyboard.close();

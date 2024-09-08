@@ -116,6 +116,31 @@ public class Grandma
 			// System.out.println("inside randomize case don\'t change  = " + saying);
 			return saying;
 		}
-	}
+	} // end method randomize case
+	
+	
+	public String randomAnswer(String grandmaHeard)
+	{
+		Grandma getAnAnswer = new Grandma();
+		
+		
+		if (grandmaHeard.equals("GOODBYE"))
+		{
+			System.out.println(getAnAnswer.farewell());
+			return getAnAnswer.farewell();
+		}
+		else if (grandmaHeard.equals(grandmaHeard.toUpperCase()))
+		{
+			System.out.println(getAnAnswer.affirmative());
+			return getAnAnswer.affirmative();
+		}
+		else
+		{
+			System.out.println(getAnAnswer.negative());
+			return getAnAnswer.negative();
+		}
+	
+		
+	} // end method randomAnswer
 	
 } // end class Grandma
