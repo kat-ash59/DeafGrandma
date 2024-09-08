@@ -36,16 +36,7 @@ public class DeafGrandmaApp
 		
 		// System.out.println("before while loop talkToGrandma = " + talkToGrandma);
 		
-		randomIndex = grandmaAnswers.randomNumber.nextInt(2);
-		
-		if (randomIndex == 1)
-		{
-			grandmaHeard = talkToGrandma.toUpperCase();
-		}
-		else
-		{
-			grandmaHeard = talkToGrandma;
-		}
+		grandmaHeard = grandmaAnswers.grandmaHears(talkToGrandma);
 		
 		
 		while(keepTalkingToGrandma)
@@ -69,16 +60,7 @@ public class DeafGrandmaApp
 			talkToGrandma = keyboard.nextLine();
 			talkToGrandma = grandmaAnswers.randomizeCase(talkToGrandma);
 			
-			randomIndex = grandmaAnswers.randomNumber.nextInt(2);
-			
-			if (randomIndex == 1)
-			{
-				grandmaHeard = talkToGrandma.toUpperCase();
-			}
-			else
-			{
-				grandmaHeard = talkToGrandma;
-			}
+			grandmaHeard = grandmaAnswers.grandmaHears(talkToGrandma);
 			
 		} // end while loop
 		

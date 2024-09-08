@@ -14,7 +14,25 @@ public class Grandma
 	
 	public String thatsWhatSheSaid = randomGrandmaAnswers[5] = "As I was saying ..... Ohhhhhhh Shinnnnnyyyy";
 	
-	
+	public String grandmaHears(String sheHeard)
+	{
+		randomIndex = randomNumber.nextInt(2);
+		
+		String grandmaHeard = null;
+		
+		if (randomIndex == 1)
+		{
+			grandmaHeard = sheHeard.toUpperCase();
+		}
+		else
+		{
+			grandmaHeard = sheHeard;
+		}
+		
+		return grandmaHeard;
+		
+		
+	} // end method grandmaHears
 	
 	
 	public String affirmative()
