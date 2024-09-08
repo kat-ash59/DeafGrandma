@@ -10,38 +10,49 @@ public class Grandma
 	
 	public Random randomNumber = new Random();
 	
+	public String [] randomGrandmaAnswers = new String[6];
+	
+	public String thatsWhatSheSaid = randomGrandmaAnswers[5] = "As I was saying ..... Ohhhhhhh Shinnnnnyyyy";
+	
+	
 	
 	
 	public String affirmative()
 	{
 		
-		randomIndex = randomNumber.nextInt(5);
+		randomIndex = randomNumber.nextInt(6);
 		
-		String [] affirmativeRandomGrandmaAnswers = new String[5];
+		String saying = null;
 		
-		affirmativeRandomGrandmaAnswers[0] = "\n\nNO, NOT SINCE THE WAR!!!!!\n\n";
-		affirmativeRandomGrandmaAnswers[1] = "\n\nI REMEMBER WHEN YOU WERE THIS HIGH\n\n";
-		affirmativeRandomGrandmaAnswers[2] = "\n\nCOME HERE AND LET ME KISS THAT CUTE FACE\n\n";
-		affirmativeRandomGrandmaAnswers[3] = "\n\nDID I EVER TELL YOU ABOUT HOW I WALKED TO SCHOOL UPHILL BOTH WAYS?!?!\n\n";
-		affirmativeRandomGrandmaAnswers[4] = "\n\nYOU SILLY CHILD. OF COURSE I LOVE YOUR VISITS!!!!\n\n";
 		
-		return affirmativeRandomGrandmaAnswers[randomIndex];
+		randomGrandmaAnswers[0] = "\n\nNo, Not since the war!!!!!\n\n";
+		randomGrandmaAnswers[1] = "\n\nI remember when you were this high!\n\n";
+		randomGrandmaAnswers[2] = "\n\nCome here let me kiss that cute face!\n\n";
+		randomGrandmaAnswers[3] = "\n\nDid I ever tell you I went to school uphill both ways?!?!\n\n";
+		randomGrandmaAnswers[4] = "\n\nYou silly child.  Of course I love your visits!!!!\n\n";
+		
+		saying = randomizeCase(randomGrandmaAnswers[randomIndex]);
+		// System.out.println("\n\nInside affirmative saying = " + saying);
+		return saying;
 	
 	} // end method affirmative
 	
 	public String negative()
 	{
-		randomIndex = randomNumber.nextInt(5);
+		randomIndex = randomNumber.nextInt(6);
 
-		String [] negativeRandomGrandmaAnswers = new String[5];
+		String saying = null;
 		
-		negativeRandomGrandmaAnswers[0] = "\n\nHUH? SPEAK UP CHILD!!!!\n\n";
-		negativeRandomGrandmaAnswers[1] = "\n\nTHE WORLD IS GOING TO HELL IN A HANDBASKET!!!!\n\n";
-		negativeRandomGrandmaAnswers[2] = "\n\nWHY IN THE WORLD DID YOU SAY THAT!!!!!\n\n";
-		negativeRandomGrandmaAnswers[3] = "\n\nYES I AM HUNGRY GO GET ME SOME GRUB!!!!\n\n";
-		negativeRandomGrandmaAnswers[4] = "\n\nI WOULD NEVER SAY THAT IN PUBLIC!!!!\n\n";
+		randomGrandmaAnswers[0] = "\n\nHUH? SPEAK UP CHILD!!!!\n\n";
+		randomGrandmaAnswers[1] = "\n\nThe world is going to hell in a handbasket!!!!\n\n";
+		randomGrandmaAnswers[2] = "\n\nWhy in the world did you say that!!!!!\n\n";
+		randomGrandmaAnswers[3] = "\n\nYes I am hungry get me some grub!!!!\n\n";
+		randomGrandmaAnswers[4] = "\n\nI would never go out in public without my teeth!!!!\n\n";
 		
-		return negativeRandomGrandmaAnswers[randomIndex];
+		saying = randomizeCase(randomGrandmaAnswers[randomIndex]);
+		// System.out.println("\n\nInside affirmative saying = " + saying);
+		return saying;
+		// return randomizeCase(randomGrandmaAnswers[randomIndex]);
 		
 	} // end method negative
 	
@@ -50,16 +61,43 @@ public class Grandma
 		
 		randomIndex = randomNumber.nextInt(5);
 		
-		String [] farewellAnswers = new String[5];
+		String saying = null;
 		
-		farewellAnswers[0] = "\n\nSMELL YOU LATER!!!!!\n\n";
-		farewellAnswers[1] = "\n\nSO LONG, FAREWELL, AUF WIEDERSEHEN, GOODBYE!!!!!!!!!\n\n";
-		farewellAnswers[2] = "\n\nSEE YOU LATER ALLIGATOR!!!!!\n\n";
-		farewellAnswers[3] = "\n\nBYE BYE NITE NITE!!!!\n\n";
-		farewellAnswers[4] = "\n\nGET OUT OF HERE ALREADY!!!!\n\n";
+		randomGrandmaAnswers[0] = "\n\nSmell you later!!!!!\n\n";
+		randomGrandmaAnswers[1] = "\n\nSo long, Farewell, Auf Wiedersehen, Goodbye!!!!!!!!!\n\n";
+		randomGrandmaAnswers[2] = "\n\nSee you later alligator!!!!!\n\n";
+		randomGrandmaAnswers[3] = "\n\nBye Bye Nite Nite!!!!\n\n";
+		randomGrandmaAnswers[4] = "\n\nGet out of here already!!!!\n\n";
 		
-		return farewellAnswers[randomIndex];
+		saying = randomizeCase(randomGrandmaAnswers[randomIndex]);
+		// System.out.println("\n\nInside affirmative saying = " + saying);
+		return saying;
+		// return randomizeCase(randomGrandmaAnswers[randomIndex]);
 		
 	} // end method farewell
+	
+	
+	public String randomizeCase(String saying)
+	{
+		randomIndex = randomNumber.nextInt(5);
+		
+		// System.out.println("inside randomize case random index = " + randomIndex);
+		
+		if ((randomIndex % 2) == 0)
+		{
+			// System.out.println("inside randomize case force upper case = " + saying);
+			return saying.toUpperCase();
+		}
+		else if ((randomIndex % 3) == 0)
+		{
+			// System.out.println("inside randomize case force lower case = " + saying);
+			return saying.toLowerCase();
+		}
+		else
+		{
+			// System.out.println("inside randomize case don\'t change  = " + saying);
+			return saying;
+		}
+	}
 	
 } // end class Grandma

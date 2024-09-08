@@ -28,14 +28,16 @@ public class DeafGrandmaApp
 		Grandma grandmaAnswers = new Grandma();
 		
 		
-		System.out.print("\n\nPlease say something to Grandma! ");
+		System.out.println("\n\nPlease say something to Grandma! ");
+		System.out.print("When you want to leave say \"BYE\" ");
 		talkToGrandma = keyboard.nextLine();
 		
+		// System.out.println("before while loop talkToGrandma = " + talkToGrandma);
 		
 		while(keepTalkingToGrandma)
 		{
 		
-			if (talkToGrandma.toUpperCase().contains("GOODBYE"))
+			if (talkToGrandma.contains("BYE"))
 			{
 				System.out.println(grandmaAnswers.farewell());
 				break;
@@ -51,6 +53,7 @@ public class DeafGrandmaApp
 		
 			System.out.print("\n\nPlease say something to Grandma! ");
 			talkToGrandma = keyboard.nextLine();
+			talkToGrandma = grandmaAnswers.randomizeCase(talkToGrandma);
 		}
 		
 		keyboard.close();
