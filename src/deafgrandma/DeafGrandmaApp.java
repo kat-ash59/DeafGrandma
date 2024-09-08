@@ -27,16 +27,7 @@ public class DeafGrandmaApp
 		String grandmaHeard = "Hello";
 		boolean keepTalkingToGrandma = true;
 		Grandma grandmaAnswers = new Grandma();
-		
-		// System.out.println("\n\nPlease say something to Grandma! ");
-		// System.out.print("When you want to leave say \"GOODBYE\" ");
-		// talkToGrandma = keyboard.nextLine();
-		
-		// System.out.println("before while loop talkToGrandma = " + talkToGrandma);
-		
-		// grandmaHeard = grandmaAnswers.grandmaHears(talkToGrandma);
-		
-		
+				
 		while(keepTalkingToGrandma)
 		{
 			
