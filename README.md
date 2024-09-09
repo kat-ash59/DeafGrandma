@@ -65,6 +65,8 @@ The program continues running until the user shouts Goodbye (so grandma hears), 
 * Can you choose Grandma's random response in a separate method? What about a _single_ method that can randomly choose an affirmative (heard ya), negative (not heard), or farewell (c'ya) response (i.e. a random response from any array)?
 
 as of 09/08/2024 - needs more testing and cleanup
+as of 09/09/2024 - calling it done!
+
 
 NOTE:
 Graded projects will be pushed to a _public_ GitHub repository for grading. Your instructor will assist in setting up the GitHub repository (_repo_) during class.

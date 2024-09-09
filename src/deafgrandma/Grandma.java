@@ -46,7 +46,7 @@ public class Grandma
 		randomGrandmaAnswers[0] = "\n\nNo, Not since the war!!!!!\n\n";
 		randomGrandmaAnswers[1] = "\n\nI remember when you were this high!\n\n";
 		randomGrandmaAnswers[2] = "\n\nCome here let me kiss that cute face!\n\n";
-		randomGrandmaAnswers[3] = "\n\nDid I ever tell you I went to school uphill both ways?!?!\n\n";
+		randomGrandmaAnswers[3] = "\n\nDid I ever tell you I went to school uphill both ways in the snow?!?!\n\n";
 		randomGrandmaAnswers[4] = "\n\nYou silly child.  Of course I love your visits!!!!\n\n";
 		
 		saying = randomizeCase(randomGrandmaAnswers[randomIndex]);
@@ -81,7 +81,7 @@ public class Grandma
 		
 		String saying = null;
 		
-		randomGrandmaAnswers[0] = "\n\nSmell you later!!!!!\n\n";
+		randomGrandmaAnswers[0] = "\n\nC\'YA!!!! Smell you later!!!!!\n\n";
 		randomGrandmaAnswers[1] = "\n\nSo long, Farewell, Auf Wiedersehen, Goodbye!!!!!!!!!\n\n";
 		randomGrandmaAnswers[2] = "\n\nSee you later alligator!!!!!\n\n";
 		randomGrandmaAnswers[3] = "\n\nBye Bye Nite Nite!!!!\n\n";
@@ -123,21 +123,33 @@ public class Grandma
 	{
 		Grandma getAnAnswer = new Grandma();
 		
+		randomIndex = randomNumber.nextInt(3);
+		
+		// System.out.println("inside random answer randomIndex = " + randomIndex);
 		
 		if (grandmaHeard.equals("GOODBYE"))
 		{
+			// System.out.println("grandma heard GOODBYE - should exit after this");
 			System.out.println(getAnAnswer.farewell());
-			return getAnAnswer.farewell();
+			return "GOODBYE";
 		}
-		else if (grandmaHeard.equals(grandmaHeard.toUpperCase()))
+		else	
 		{
-			System.out.println(getAnAnswer.affirmative());
-			return getAnAnswer.affirmative();
-		}
-		else
-		{
-			System.out.println(getAnAnswer.negative());
-			return getAnAnswer.negative();
+			if (randomIndex == 1)
+			{
+				System.out.println(getAnAnswer.affirmative());
+				return getAnAnswer.affirmative();
+			}
+			else if (randomIndex == 2)
+			{
+				System.out.println(getAnAnswer.negative());
+				return getAnAnswer.negative();
+			}
+			else
+			{
+				System.out.println(getAnAnswer.farewell());
+				return getAnAnswer.farewell();
+			}
 		}
 	
 		
