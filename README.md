@@ -122,3 +122,5 @@ added a single string in array that was available across both affirmative and ne
 
 the rusty little grey cells are awakening!!!
 
+print statements are my friend, made sure to comment them out to keep them from showing up unexpectedly
+
