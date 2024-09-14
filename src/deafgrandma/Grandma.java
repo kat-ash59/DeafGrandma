@@ -14,6 +14,8 @@ public class Grandma
 	
 	public String thatsWhatSheSaid = randomGrandmaAnswers[5] = "As I was saying ..... Ohhhhhhh Shinnnnnyyyy";
 	
+	// method to determine what graddma hears
+	// it will randomly return uppercase text
 	public String grandmaHears(String sheHeard)
 	{
 		randomIndex = randomNumber.nextInt(2);
@@ -34,7 +36,8 @@ public class Grandma
 		
 	} // end method grandmaHears
 	
-	
+	// returns affirmative strings in random case
+	// upper case, lower case or original text
 	public String affirmative()
 	{
 		
@@ -55,6 +58,8 @@ public class Grandma
 	
 	} // end method affirmative
 	
+	// return negative strings in random case
+	// upper case, lower case or original text
 	public String negative()
 	{
 		randomIndex = randomNumber.nextInt(6);
@@ -74,6 +79,8 @@ public class Grandma
 		
 	} // end method negative
 	
+	// return farewell address in random case
+	// upper case, lower case or original text
 	public String farewell()
 	{
 		
@@ -94,7 +101,7 @@ public class Grandma
 		
 	} // end method farewell
 	
-	
+	// method to randomize what case the text will return
 	public String randomizeCase(String saying)
 	{
 		randomIndex = randomNumber.nextInt(5);
@@ -119,6 +126,8 @@ public class Grandma
 	} // end method randomize case
 	
 	
+	
+	// provides a random answer that grandma will answer with
 	public String randomAnswer(String grandmaHeard)
 	{
 		Grandma getAnAnswer = new Grandma();
